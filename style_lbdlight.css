@@ -1,0 +1,330 @@
+
+/*Little Boy Dog Stylesheet*/
+
+body { 
+    font-family: "National Park";
+    background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/108903054_0Wo2Q9zzg88cEQo.png") ;
+    background-color: #f6f2ee;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color:#6c3d24;
+}
+
+.national-park-<uniquifier> {
+  font-family: "National Park", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+header {
+    position: sticky;
+    top : 0;
+    z-index: 5;
+    background: inherit;
+    height : 8rem;
+}
+
+footer {
+    position : sticky;
+    bottom : 0;
+    z-index : 5;
+    background: inherit;
+}
+
+div.flex-container { 
+    margin:0.5rem;
+    display: flex;
+    flex-direction:row;
+}
+
+.side {
+    flex: 20%;
+    position : sticky;
+    top : 8rem; 
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #efd9c8;
+    color:#49210c;
+    height:100%;
+}
+
+div.side img {
+    border-radius: 50%;
+    display:block; 
+    margin: auto;
+}
+
+.main {
+    flex: 80%;
+    padding: 1rem;
+    color:#49210c;
+    min-width: 0;
+
+}
+
+video.showreel {
+    display: block;
+    margin:auto;
+    width:auto;
+    height:28rem;
+    border-radius:0.5rem;
+
+}
+
+.carousel-wrapper {
+    width : 100%;
+    overflow:hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul.carousel {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    justify-content: flex-start;
+    width:max-content;
+}
+
+ul.carousel li {
+    flex: 0 0 auto;
+    margin-right: 0.3rem;
+}
+
+ul.carousel li img {
+    width:auto;
+    height:10rem;
+    border-radius:0.3rem;
+}
+
+ul.tab {
+    border-radius: 1rem; 
+    background-color : #6c3d24;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+
+ul.tab li a {
+    display: block;
+    text-align: center;
+    color: #e1af83;
+    text-decoration: none;
+    margin:1rem;
+}
+
+
+ul.tab li a:hover {
+    color:#f6f2ee;
+  
+}
+
+
+ul li a {
+    user-select: none;
+    display: block;
+    text-align: center;
+    color: #6c3d24;
+    text-decoration: none;
+}
+
+
+ul li a:hover {
+    cursor:pointer;
+    color:#f6f2ee;
+  
+}
+
+ul li a.active {
+    color:#f6f2ee;
+}
+
+ul li a.active:hover {
+    color:#e1af83;
+}
+
+p {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+
+}
+
+.tabcontent {
+    display: none;
+    animation: fadeEffect 1s;
+}
+
+.carousel:hover {
+  animation-play-state: paused;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+ul.gallery li {
+    margin-left:0.3rem;
+}
+
+
+ul.gallery img:hover,
+ul.gallery video:hover {
+    cursor:pointer;
+    transform:scale(1.02);
+    transition: transform 0.25s;
+  
+}
+
+ ul.gallery li img,
+ ul.gallery li video {
+    width:auto;
+    height:20rem;
+    border-radius:0.5rem;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    background-color:#f6f2eee8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    opacity:0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+div.slideshow img,
+div.slideshow video {
+    width:100%;
+    border-radius:0.5rem;
+}
+
+.close {
+  color:#e1af83;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color:#e76e3e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.slideshow {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -50px;
+  color:#e1af83;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+    left:1%;
+ }
+.next {
+  right:1%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    div.flex-container {   
+        flex-direction: column;
+    }
+    ul.gallery li img,
+    ul.gallery li video {
+        width: auto;
+        height:12rem;
+        border-radius : 0.5rem;
+    }
+
+    .side {
+        display : flex;
+        flex-direction: row;
+        align-items : center;
+        gap : 1rem;
+    
+    }
+
+    div.side img {
+        height:8rem;
+        width: auto;
+        flex-shrink : 0;
+        flex: 0 0 auto;
+
+    }
+
+    .side ul {
+        flex : 1;
+    }
+
+    div.modal a i {
+        scale: 0.7;  
+    }
+
+    .prev {
+        left:0.3%;
+    }
+    .next {
+        right:0.3%;
+    }
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
