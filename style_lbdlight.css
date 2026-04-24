@@ -70,7 +70,7 @@ video.showreel {
     display: block;
     margin:auto;
     width:auto;
-    height:28rem;
+    height:20rem;
     border-radius:0.5rem;
 
 }
@@ -124,12 +124,10 @@ ul.tab li a {
     margin:1rem;
 }
 
-
 ul.tab li a:hover {
     color:#f6f2ee;
   
 }
-
 
 ul li a {
     user-select: none;
@@ -138,7 +136,6 @@ ul li a {
     color: #6c3d24;
     text-decoration: none;
 }
-
 
 ul li a:hover {
     cursor:pointer;
