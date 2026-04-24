@@ -17,79 +17,117 @@
             }
             document.getElementById('defaultTab').click();
 
-            // Slideshows
-            function openModal(id, group, startIndex) {
-                const modal = document.getElementById(id);
+// Slideshows
 
-                activeModal = modal;
-                activeGroup = group;
+// Opening Modal
+function openModal(id, group, startIndex) {
+    const modal = document.getElementById(id);
 
-                modal.style.display = "flex";
+    activeModal = modal;
+    activeGroup = group;
 
-                requestAnimationFrame(() => {
-                    modal.classList.add("show");
-                });
+    slideIndexes[group] = startIndex;
 
-                showSlides(group, startIndex);
-            }
+    modal.style.display = "flex";
 
-            function closeModal(modal) {
-                modal.classList.remove("show");
+    requestAnimationFrame(() => {
+        modal.classList.add("show");
+    });
 
-                setTimeout(() => {
-                    modal.style.display = "none";
-                }, 300);
-            }
+    renderSlides(group);
+}
 
-            window.addEventListener("click", function (event) {
-                if (event.target.classList.contains("modal")) {
-                    closeModal(event.target);
-                }
-            });
+// Closing Modal
+function closeModal(modal) {
+    modal.classList.remove("show");
 
-            const slideIndexes = {};
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300);
+}
 
-            function showSlides(group, n) {
-                const slides = document.getElementsByClassName(group);
+window.addEventListener("click", function (event) {
+    if (event.target.classList.contains("modal")) {
+        closeModal(event.target);
+    }
+});
 
-                // If first time OR direct jump → set index
-                if (!slideIndexes[group] || n !== 1 && n !== -1) {
-                    slideIndexes[group] = n;
-                } else {
-                    slideIndexes[group] += n;
-                }
+const slideIndexes = {};
 
-                if (slideIndexes[group] > slides.length) slideIndexes[group] = 1;
-                if (slideIndexes[group] < 1) slideIndexes[group] = slides.length;
+// Slides
+function renderSlides(group) {
+    const slides = document.getElementsByClassName(group);
 
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
 
-                slides[slideIndexes[group] - 1].style.display = "block";
-            }
+    slides[slideIndexes[group] - 1].classList.add("active");
+}
 
-            function plusSlides(group, n) {
-                showSlides(group, n);
-            }
+// Navigation
+function plusSlides(group, n) {
+    const slides = document.getElementsByClassName(group);
 
-            let activeModal = null;
-            let activeGroup = null;
+    slideIndexes[group] += n;
 
-            window.addEventListener("keydown", function (e) {
-                if (!activeModal) return;
+    if (slideIndexes[group] > slides.length) slideIndexes[group] = 1;
+    if (slideIndexes[group] < 1) slideIndexes[group] = slides.length;
 
-                if (e.key === "ArrowRight") {
-                    plusSlides(activeGroup, 1);
-                }
+    renderSlides(group);
+}
 
-                if (e.key === "ArrowLeft") {
-                    plusSlides(activeGroup, -1);
-                }
+// Keyboard navigation
+let activeModal = null;
+let activeGroup = null;
 
-                if (e.key === "Escape") {
-                    closeModal(activeModal);
-                    activeModal = null;
-                    activeGroup = null;
-                }
-                });
+window.addEventListener("keydown", function (e) {
+    if (!activeModal) return;
+
+    if (e.key === "ArrowRight") {
+        plusSlides(activeGroup, 1);
+    }
+
+    if (e.key === "ArrowLeft") {
+        plusSlides(activeGroup, -1);
+    }
+
+    if (e.key === "Escape") {
+        closeModal(activeModal);
+        activeModal = null;
+        activeGroup = null;
+    }
+});
+
+//Swipe navigation
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.querySelectorAll(".modal-content").forEach(content => {
+
+    content.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    content.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+});
+
+function handleSwipe() {
+    const threshold = 50; // minimum distance in px
+
+    const diff = touchEndX - touchStartX;
+
+    if (Math.abs(diff) < threshold) return; // ignore small swipes
+
+    if (diff < 0) {
+        // Swipe left → next
+        plusSlides(activeGroup, 1);
+    } else {
+        // Swipe right → previous
+        plusSlides(activeGroup, -1);
+    }
+}
