@@ -117,11 +117,11 @@ document.querySelectorAll(".modal-content").forEach(content => {
 });
 
 function handleSwipe() {
-    const threshold = 50; // minimum distance in px
+    const threshold = 50;
 
     const diff = touchEndX - touchStartX;
 
-    if (Math.abs(diff) < threshold) return; // ignore small swipes
+    if (Math.abs(diff) < threshold) return;
 
     if (diff < 0) {
         // Swipe left → next
@@ -131,3 +131,16 @@ function handleSwipe() {
         plusSlides(activeGroup, -1);
     }
 }
+
+//Media Access Restriction
+document.addEventListener("contextmenu", function (event) {
+  if (event.target.closest("img, video")) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("dragstart", function (event) {
+  if (event.target.closest("img, video")) {
+    event.preventDefault();
+  }
+});
