@@ -405,7 +405,7 @@ img, video {
     ul.gallery li img,
     ul.gallery li video {
         width: auto;
-        height:45vh;
+        height:20vh;
         border-radius : 0.5rem;
     }
 
