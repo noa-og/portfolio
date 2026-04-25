@@ -24,6 +24,7 @@ header {
     z-index: 5;
     background: inherit;
     height : 8rem;
+    width:100%;
 }
 
 footer {
@@ -31,6 +32,10 @@ footer {
     bottom : 0;
     z-index : 5;
     background: inherit;
+}
+
+ul{
+    list-style: none;
 }
 
 div.flex-container { 
@@ -58,6 +63,13 @@ div.side img {
     margin: auto;
 }
 
+.side ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
 .main {
     flex: 80%;
     padding: 1rem;
@@ -78,13 +90,6 @@ video.showreel {
 .carousel-wrapper {
     width : 100%;
     overflow:hidden;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 ul.carousel {
@@ -127,6 +132,76 @@ ul.tab li a {
 ul.tab li a:hover {
     color:#f6f2ee;
   
+}
+
+.dropdown {
+    display:none;
+    position:relative;
+    background-color: #6c3d24;
+    border-radius:1rem;
+    padding:0;
+    align-self: right;
+    justify-self: right;
+}
+.dropdown-content {
+    color:#e1af83;
+    margin:1rem;
+}
+
+.dropdown-content ul li a {
+    color:#e1af83;
+}
+
+.dropdown-content ul li a:hover {
+    color:#efd9c8;
+}
+
+.dropdown-content ul li a.active {
+    color:#efd9c8;
+}
+
+.dropdown-content ul li a.active:hover {
+    color:#e1af83;
+}
+
+.dropdown-menu {
+    display:none;
+    position:absolute;
+    right: 0;
+}
+
+.dropdown-menu ul{
+    list-style:none;
+    padding:0.5rem;
+    background-color: #6c3d24;
+    border-radius: 1rem;
+    font-size:large;
+    font-weight:500;
+}
+
+.dropdown-menu ul li{
+    margin:0.5rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle{
+    color:#e1af83;
+    margin:1rem;
+}
+
+.dropdown-toggle:hover {
+    color:#efd9c8;
+}
+
+.dropdown-toggle.active {
+    color:#efd9c8;
+}
+
+.dropdown-toggle.active:hover {
+    color:#e1af83;
 }
 
 ul li a {
@@ -313,22 +388,29 @@ img, video {
 /*Mobile Display*/
 
 @media screen and (max-width: 1000px) {
+    ul.tab {
+        display:none;
+    }
+
+    .dropdown {
+        display:flex;
+    }
+
     div.flex-container {   
         flex-direction: column;
     }
     ul.gallery li img,
     ul.gallery li video {
         width: auto;
-        height:12rem;
+        height:20rem;
         border-radius : 0.5rem;
     }
 
     .side {
-        display : flex;
+        display : none;
         flex-direction: row;
         align-items : center;
         gap : 1rem;
-    
     }
 
     div.side img {
@@ -336,7 +418,10 @@ img, video {
         width: auto;
         flex-shrink : 0;
         flex: 0 0 auto;
+    }
 
+    p.desc {
+        display: none;
     }
 
     .side ul {
@@ -344,13 +429,11 @@ img, video {
     }
 
     div.modal a i {
-        scale: 0.7;  
+        scale: 1.5;  
     }
 
-    .prev {
-        left:0.3%;
+    .prev, .next {
+        display:none;
     }
-    .next {
-        right:0.3%;
-    }
+
 }
