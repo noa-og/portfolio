@@ -69,8 +69,8 @@ div.side img {
 video.showreel {
     display: block;
     margin:auto;
-    width:auto;
-    height:20rem;
+    width:72vw;
+    height:auto;
     border-radius:0.5rem;
 
 }
