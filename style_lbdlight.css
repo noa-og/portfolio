@@ -47,6 +47,7 @@ header {
     align-items: center;
     justify-content: center;
     color:#e1af83;
+    font-size: large;
 }
 .tab li {
     margin:1rem;
@@ -128,7 +129,6 @@ p {
 }
 
 div.flex-container { 
-    margin:0.5rem;
     display: flex;
     flex-direction:row;
 }
@@ -161,7 +161,7 @@ div.flex-container {
 /*Main*/
 .main {
     flex: 80%;
-    padding: 1rem;
+    margin:0;
     color:#49210c;
     min-width: 0;
 }
@@ -209,6 +209,7 @@ ul.carousel li img {
 
 /*Gallery*/
 .gallery {
+    padding:0;
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -338,7 +339,7 @@ footer {
 /*Mobile Display*/
 @media screen and (max-width: 1000px) {
     body {
-        font-size: x-large;
+        font-size: 1rem;
     }
 
     /*Header*/
