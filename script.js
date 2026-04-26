@@ -14,8 +14,27 @@
                     }
                 document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
+            const menu = document.querySelector(".menu");
+            const button = document.querySelector(".collapse");
+            if (menu) menu.classList.remove("open");
+            if (button) button.classList.remove("active");
             }
             document.getElementById('defaultTab').click();
+            
+
+//Collapsible Menu
+
+var coll = document.getElementsByClassName("collapse");
+var i;
+
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+
+    var content = document.querySelector(".menu");
+    content.classList.toggle("open");
+  });
+}
 
 // Slideshows
 
