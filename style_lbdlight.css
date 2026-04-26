@@ -373,4 +373,8 @@ footer {
         display:none;
     }
 
+    footer:{
+        font-size:large;
+    }
+
 }
