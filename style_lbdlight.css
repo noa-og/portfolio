@@ -127,6 +127,10 @@ p {
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
 }
+.desc {
+    margin-left:0.3rem;
+    margin-right:0.3rem;
+}
 
 div.flex-container { 
     display: flex;
@@ -139,6 +143,7 @@ div.flex-container {
     position : sticky;
     top : 8rem; 
     padding: 1rem;
+    margin-right:1rem;
     border-radius: 1rem;
     background-color: #efd9c8;
     color:#49210c;
