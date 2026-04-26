@@ -12,108 +12,109 @@
 <body>
 
 <!--Header-->
-
 <header>
-    <h1 style="text-align: center;">
-    noa_og
-    </h1>
+    <!--PC Header-->
+    <div class="pc-header">
+        <h1 style="text-align: center;">
+            noa_og
+        </h1>
 
-    <!--Navbar-->
-    <ul class="tab">
-        <li>
-            <a id="defaultTab" href="#home" class="tablinks active" onclick="opentab(event,'home')">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="#comic" class="tablinks active" onclick="opentab(event,'comic')">
-                Comic
-            </a>
-        </li>
-        <li>
-            <a href="#illustration" class="tablinks" onclick="opentab(event,'illustration')">
-                Illustration
-            </a>
-        </li>
-        <li>
-            <a href="#storyboard" class="tablinks" onclick="opentab(event,'storyboard')">
-                Storyboard
-            </a>
-        </li>
-        <li>
-            <a href="#animation" class="tablinks" onclick="opentab(event,'animation')">
-                Animation
-            </a>
-        </li>
-        <li>
-            <a href="#concept" class="tablinks" onclick="opentab(event,'concept')">
-                Concept Art
-            </a>
-        </li>
-        <li>
-            <a href="#model" class="tablinks" onclick="opentab(event,'model')">
-                Character Modeling
-            </a>
-        </li>
-    </ul>
-
-    <!--DropDown Menu-->
-
-    <div class="dropdown">
-        <div class="dropdown-content">
-            <a class="dropdown-toggle" href="#dropdownmenu" id="dropdownbutton" data-toggle="dropdown-toggle"
-                aria-haspopup="true" aria-expanded="false">
-                <i class=" fa-solid fa-bars fa-2x"></i>
-            </a>
-            <div id="dropdownmenu" class="dropdown-menu" aria-labelledby="dropdownbutton">
-                <ul>
-                    <li>
-                        <a id="defaultTab" href="#home" class="dropdown-item tablinks active" onclick="opentab(event,'home')">
-                        Home
-                        </a>
-                    </li>
-                        
-                    <li>
-                        <a href="#comic" class="dropdown-item tablinks active" onclick="opentab(event,'comic')">
-                        Comic
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#illustration" class="dropdown-item tablinks" onclick="opentab(event,'illustration')">
-                        Illustration
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#storyboard" class="dropdown-item tablinks" onclick="opentab(event,'storyboard')">
-                        Storyboard
-                        </a>
-                    </li>
-                        
-                    <li>
-                        <a href="#animation" class="dropdown-item tablinks" onclick="opentab(event,'animation')">
-                        Animation
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#concept" class="dropdown-item tablinks" onclick="opentab(event,'concept')">
-                        Concept Art
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#model" class="dropdown-item tablinks" onclick="opentab(event,'model')">
-                        Character Modeling
-                        </a>
-                    </li>  
-                </ul>
-            </div>
-        </div>
-
+        <!--Navbar-->
+        <ul class="tab">
+            <li>
+                <a id="defaultTab" href="#home" class="tablinks active" onclick="opentab(event,'home')">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#comic" class="tablinks active" onclick="opentab(event,'comic')">
+                    Comic
+                </a>
+            </li>
+            <li>
+                <a href="#illustration" class="tablinks" onclick="opentab(event,'illustration')">
+                    Illustration
+                </a>
+            </li>
+            <li>
+                <a href="#storyboard" class="tablinks" onclick="opentab(event,'storyboard')">
+                    Storyboard
+                </a>
+            </li>
+            <li>
+                <a href="#animation" class="tablinks" onclick="opentab(event,'animation')">
+                    Animation
+                </a>
+            </li>
+            <li>
+                <a href="#concept" class="tablinks" onclick="opentab(event,'concept')">
+                    Concept Art
+                </a>
+            </li>
+            <li>
+                <a href="#model" class="tablinks" onclick="opentab(event,'model')">
+                    Character Modeling
+                </a>
+            </li>
+        </ul>
     </div>
     
+    <!--Mobile Header-->
+    <div class="mobile-header" id="mobile-nav">
+
+        <!--Navbar-->
+        <ul class="tab">
+            <li>
+                <img loading="lazy" src="images/favicon_l03.png">
+            </li>
+            <li>
+                <h1>
+                    noa_og
+                </h1>
+            </li>
+            <li>
+                <i class="collapse fa-solid fa-bars fa-2x"></i>
+            </li>       
+        </ul>
+        <ul class="menu">
+            <li>
+                <a id="defaultTab" href="#home" class="tablinks active" onclick="opentab(event,'home')">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#comic" class="tablinks active" onclick="opentab(event,'comic')">
+                    Comic
+                </a>
+            </li>
+            <li>
+                <a href="#illustration" class="tablinks" onclick="opentab(event,'illustration')">
+                    Illustration
+                </a>
+            </li>
+            <li>
+                <a href="#storyboard" class="tablinks" onclick="opentab(event,'storyboard')">
+                    Storyboard
+                </a>
+            </li>
+            <li>
+                <a href="#animation" class="tablinks" onclick="opentab(event,'animation')">
+                    Animation
+                </a>
+            </li>
+            <li>
+                <a href="#concept" class="tablinks" onclick="opentab(event,'concept')">
+                     Concept Art
+                </a>
+            </li>
+            <li>
+                <a href="#model" class="tablinks" onclick="opentab(event,'model')">
+                    Character Modeling
+                </a>
+            </li>
+        </ul>
+
+    </div>  
 
 </header>
 
@@ -247,6 +248,7 @@
 
         </div>
 
+        <!--Comic-->
         <div id="comic" class="tabcontent">
 
             <ul class="gallery">
