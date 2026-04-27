@@ -171,9 +171,11 @@ div.flex-container {
     margin:0;
     color:#49210c;
     min-width: 0;
+    padding:1rem;
 }
 
 .tabcontent {
+    padding-top:2rem;
     scroll-margin-top: 11rem;
     display: none;
     animation: fadeEffect 1s;
@@ -330,7 +332,7 @@ footer {
     text-align: center;
 }
 footer.mobile {
-    font-size:large;
+    font-size:x-large;
     position : sticky;
     bottom : 0;
      z-index : 5;
@@ -357,7 +359,13 @@ footer.mobile {
     .flex-container {
         font-size: xx-large;
     }
-
+    h1{
+        line-height:0.6;
+    }
+    span {
+        font-size: x-large;
+        font-weight: 400;
+    }
     .tab {
         border-radius: 1rem; 
         background-color : #6c3d24;
@@ -373,8 +381,8 @@ footer.mobile {
         font-size: xx-large;
         margin-left:2rem;
         margin-right:2rem;
-        margin-top:0.4rem;
-        margin-bottom: 0.4rem;
+        margin-top:0;
+        margin-bottom: 0;
     }
     
     /*Sidebar*/
