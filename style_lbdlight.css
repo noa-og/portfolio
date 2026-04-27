@@ -395,6 +395,10 @@ footer.mobile {
         width:90vw;
         height:auto;
     }
+    .desc {
+        margin-top : 1rem;
+        margin-bottom: 2rem;
+    }
 
     /*Gallery*/
     ul.gallery li img,
