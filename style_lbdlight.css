@@ -30,7 +30,7 @@ header {
     height : 8rem;
     width:100%;
 }
-.mobile-header {
+.mobile {
     display:none;
     position: relative;
 }
@@ -47,11 +47,11 @@ header {
     align-items: center;
     justify-content: center;
     color:#e1af83;
-    font-size: large;
 }
 .tab li {
     margin:1rem;
     text-align: center;
+    font-size: large;
 }
 .tab li img {
     height:auto;
@@ -90,6 +90,8 @@ header {
     margin:0;
     transition: max-height 0.4s ease, opacity 0.3s ease;
     opacity: 0;
+    font-size:xx-large;
+    font-weight: 500;
 }
 .menu li a {
     color: #e1af83;
@@ -180,7 +182,7 @@ img, video {
   user-select: none;
   -webkit-user-drag: none;
 }
-video.showreel {
+.showreel {
     display: block;
     margin:auto;
     width:72vw;
@@ -325,6 +327,15 @@ footer {
     bottom : 0;
     z-index : 5;
     background: inherit;
+    text-align: center;
+}
+footer.mobile {
+    font-size:large;
+    position : sticky;
+    bottom : 0;
+     z-index : 5;
+    background: inherit;
+    text-align: center;
 }
 
 /*Animations*/
@@ -343,21 +354,38 @@ footer {
 
 /*Mobile Display*/
 @media screen and (max-width: 1000px) {
-    body {
+    .flex-container {
         font-size: xx-large;
     }
 
-    /*Header*/
-    .pc-header {
-        display:none;
+    .tab {
+        border-radius: 1rem; 
+        background-color : #6c3d24;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin:0;
+        display: flex;
+        justify-content: space-between;
+        color:#e1af83;
     }
-    .mobile-header {
-        display:block;
+    .tab li{
+        font-size: xx-large;
+        margin-left:2rem;
+        margin-right:2rem;
+        margin-top:0.4rem;
+        margin-bottom: 0.4rem;
     }
     
     /*Sidebar*/
     .side {
         display : none;
+    }
+
+    /*Showreel*/
+    .showreel {
+        width:90vw;
+        height:auto;
     }
 
     /*Gallery*/
@@ -378,8 +406,12 @@ footer {
         display:none;
     }
 
-    footer:{
-        font-size:large;
+    /*Display*/
+    .pc {
+        display:none;
+    }
+    .mobile{
+        display:block;
     }
 
 }
