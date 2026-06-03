@@ -8,71 +8,119 @@
     <link rel="stylesheet" href="style_lbdlight.css">
 </head>
 <body>
+
+    <p><span style="font-style: italic; font-weight: 700;">Daryl</span>
+    - Pokémon Fake Character</p>
     <ul class="gallery">
-                <li>
-                    <img  onclick="openModal('modelModal', 'modelSlides', 1)"
-                    src="images/charmod/render_kyu_02.png"/>
-                </li>
-                <li>
-                    <video  onclick="openModal('modelModal', 'modelSlides', 2)" autoplay muted loop>
-                        <source
-                        src="images/charmod/01_Kyu_Sculpt.mp4" />
-                    </video>
-                </li>
-                <li>
-                    <video  onclick="openModal('modelModal', 'modelSlides', 3)" autoplay muted loop>
-                        <source
-                        src="images/charmod/02_Tora_Sculpt.mp4" />
-                    </video>
-                </li>
-                <li>
-                    <video  onclick="openModal('modelModal', 'modelSlides', 4)" autoplay muted loop>
-                        <source
-                        src="images/charmod/03_Ayako_Sculpt.mp4" />
-                    </video>
-                </li>
-                <li>
-                    <video  onclick="openModal('modelModal', 'modelSlides', 5)" autoplay muted loop>
-                        <source
-                        src="images/charmod/ayako_wireframe.mp4" />
-                    </video>
-                </li>
-                <li>
-                    <video  onclick="openModal('modelModal', 'modelSlides', 6)" autoplay muted loop>
-                        <source
-                        src="images/charmod/kirby_body_turn.mp4" />
-                    </video>
-                </li>
-                <li>
-                    <video  onclick="openModal('modelModal', 'modelSlides', 7)" autoplay muted loop>
-                        <source
-                        src="images/charmod/kirby_wireframe_turn.mp4" />
-                    </video>
-                </li>
-                <li>
-                    <img  onclick="openModal('modelModal', 'modelSlides', 8)"
-                    src="images/charmod/render02.jpg"/>
-                </li>
-                <li>
-                    <img  onclick="openModal('modelModal', 'modelSlides', 9)"
-                    src="images/charmod/render03.jpg"/>
-                </li>
-                <li>
-                    <img  onclick="openModal('modelModal', 'modelSlides', 10)"
-                    src="images/charmod/fdet_body.png"/>
-                </li>
-                <li>
-                    <img  onclick="openModal('modelModal', 'modelSlides', 11)"
-                    src="images/charmod/fdet_vetements.png"/>
-                </li>
-            
-            </ul>
+        <li>
+            <video onclick="openModal('modelModal', 'modelSlides', 1)" autoplay muted loop controls controlsList="nodownload">
+                <source src="images/charmod/DarylPKMN_turnaround_wireframe.mp4"/>
+            </video>
+        </li>
+    </ul>
+
+    <p><span style="font-style: italic; font-weight: 700;">Kirby, Perfpals</span>
+    - The Magic Scented Plushies</p>
+    <ul class="gallery">
+        <li>
+            <video  onclick="openModal('modelModal', 'modelSlides', 2)" autoplay muted loop controls controlsList="nodownload">
+                <source
+                src="images/charmod/kirby_body_turn.mp4" />
+            </video>
+        </li>
+        <li>
+            <video  onclick="openModal('modelModal', 'modelSlides', 3)" autoplay muted loop controls controlsList="nodownload">
+                <source
+                src="images/charmod/kirby_wireframe_turn.mp4" />
+            </video>
+        </li>
+    </ul>
+
+    <p><span style="font-style: italic; font-weight: 700;">Boogie the Wolf</span>
+    - Sonic Fake Character</p>
+    <ul class="gallery">
+        <li>
+            <img  onclick="openModal('modelModal', 'modelSlides', 4)"
+            src="images/charmod/render02.jpg"/>
+        </li>
+        <li>
+            <img  onclick="openModal('modelModal', 'modelSlides', 5)"
+            src="images/charmod/render03.jpg"/>
+        </li>
+    </ul>
+
+    <p><span style="font-style: italic; font-weight: 700;">Ramen Sentou</span>
+    - Student Short Film</p>
+    <ul class="gallery">
+        <li>
+            <img  onclick="openModal('modelModal', 'modelSlides', 6)"
+            src="images/charmod/render_kyu_02.png"/>
+        </li>
+        <li>
+            <video  onclick="openModal('modelModal', 'modelSlides', 7)" autoplay muted loop controls controlsList="nodownload">
+                <source
+                src="images/charmod/01_Kyu_Sculpt.mp4" />
+            </video>
+        </li>
+        <li>
+            <video  onclick="openModal('modelModal', 'modelSlides', 8)" autoplay muted loop controls controlsList="nodownload">
+                <source
+                src="images/charmod/02_Tora_Sculpt.mp4" />
+            </video>
+        </li>
+        <li>
+            <video  onclick="openModal('modelModal', 'modelSlides', 9)" autoplay muted loop controls controlsList="nodownload">
+                <source
+                src="images/charmod/03_Ayako_Sculpt.mp4" />
+            </video>
+        </li>
+        <li>
+            <video  onclick="openModal('modelModal', 'modelSlides', 10)" autoplay muted loop controls controlsList="nodownload">
+                <source
+                src="images/charmod/ayako_wireframe.mp4" />
+            </video>
+        </li>
+        <li>
+            <img  onclick="openModal('modelModal', 'modelSlides', 11)"
+            src="images/charmod/fdet_body.png"/>
+        </li>
+        <li>
+            <img  onclick="openModal('modelModal', 'modelSlides', 12)"
+            src="images/charmod/fdet_vetements.png"/>
+        </li>
+    </ul>
 
             <div id="modelModal" class="modal">
                 <span class="close cursor" onclick="closeModal(document.getElementById('modelModal'))"><i class="fa-solid fa-xmark fa-2x"></i></span>
                 <div class="modal-content">
 
                     <!--Slideshow-->
+                    <div class="slideshow mySlides modelSlides">
+                        <video  controls controlsList="nodownload">
+                            <source 
+                            src="images/charmod/DarylPKMN_turnaround_wireframe.mp4" />
+                        </video>
+                    </div>
+                    <div class="slideshow mySlides modelSlides">
+                        <video  controls controlsList="nodownload">
+                            <source 
+                            src="images/charmod/kirby_body_turn.mp4" />
+                        </video>
+                    </div>
+                    <div class="slideshow mySlides modelSlides">
+                        <video  controls controlsList="nodownload">
+                            <source 
+                            src="images/charmod/kirby_wireframe_turn.mp4" />
+                        </video>
+                    </div>
+                    <div class="slideshow mySlides modelSlides">
+                        <img  
+                        src="images/charmod/render02.jpg" />
+                    </div>
+                    <div class="slideshow mySlides modelSlides">
+                        <img  
+                        src="images/charmod/render03.jpg" />
+                    </div>
                     <div class="slideshow mySlides modelSlides">
                         <img  
                         src="images/charmod/render_kyu_02.png" />
@@ -100,26 +148,6 @@
                             <source 
                             src="images/charmod/ayako_wireframe.mp4" />
                         </video>
-                    </div>
-                    <div class="slideshow mySlides modelSlides">
-                        <video  controls controlsList="nodownload">
-                            <source 
-                            src="images/charmod/kirby_body_turn.mp4" />
-                        </video>
-                    </div>
-                    <div class="slideshow mySlides modelSlides">
-                        <video  controls controlsList="nodownload">
-                            <source 
-                            src="images/charmod/kirby_wireframe_turn.mp4" />
-                        </video>
-                    </div>
-                    <div class="slideshow mySlides modelSlides">
-                        <img  
-                        src="images/charmod/render02.jpg" />
-                    </div>
-                    <div class="slideshow mySlides modelSlides">
-                        <img  
-                        src="images/charmod/render03.jpg" />
                     </div>
                     <div class="slideshow mySlides modelSlides">
                         <img  
