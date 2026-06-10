@@ -202,11 +202,19 @@ img, video {
     width : 100%;
     overflow:hidden;
 }
-ul.carousel {
-    display: flex;
-    animation: scroll 40s linear infinite;
-    justify-content: flex-start;
+
+.carousel-track {
+    display: flex;  
+    animation: scroll 50s linear infinite;
     width:max-content;
+
+}
+ul.carousel {
+    display:flex;
+    width:max-content;
+    flex-shrink:0;
+    padding:0;
+    margin:0;
 }
 ul.carousel li {
     flex: 0 0 auto;
@@ -214,12 +222,13 @@ ul.carousel li {
 }
 ul.carousel li img {
     width:auto;
-    height:10rem;
+    height:22rem;
     border-radius:0.3rem;
 }
 .carousel:hover {
   animation-play-state: paused;
 }
+
 
 /*Gallery*/
 .gallery {
@@ -233,7 +242,8 @@ ul.gallery li {
     margin-left:0.3rem;
 }
 ul.gallery img:hover,
-ul.gallery video:hover {
+ul.gallery video:hover,
+ul.carousel li img:hover {
     cursor:pointer;
     transform:scale(1.02);
     transition: transform 0.25s; 

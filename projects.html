@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style_lbdlight.css">
+</head>
+<body>
+    <p><span style="font-style: italic; font-weight: 700;">Soupy Time!</span>
+    - Animated Children Series Project</p>
+    <ul class="gallery">
+                <li>
+                    <img  onclick="openModal('projectsModal', 'projectsSlides', 1)"
+                    src="images/illust/soupy time concept poster_v2.png"/>
+                </li>
+                <li>
+                    <img  onclick="openModal('conceptModal', 'conceptSlides', 2)"
+                    src="images/concept/soupy_expressions.png" />
+                </li>
+                <li>
+                    <img  onclick="openModal('projectsModal', 'projectsSlides', 3)"
+                    src="images/concept/lineup-pilote.png"/>
+                </li>
+                <li>
+                    <img  onclick="openModal('projectsModal', 'projectsSlides', 4)"
+                    src="images/concept/sorciere_solana.png"/>
+                </li>
+                <li>
+                    <img  onclick="openModal('projectsModal', 'projectsSlides', 5)"
+                    src="images/story/Scan2025-05-29_124309_000_1.png"/>
+                </li>
+                <li>
+                    <img  onclick="openModal('projectsModal', 'projectsSlides', 6)"
+                    src="images/story/Scan2025-05-29_124309_000_2.png"/>
+                </li>
+                <li>
+                    <img  onclick="openModal('projectsModal', 'projectsSlides', 7)"
+                    src="images/story/Scan2025-05-29_124309_003.png"/>
+                </li>
+            </ul>
+
+            <div id="projectsModal" class="modal">
+                <a class="close cursor" onclick="closeModal(document.getElementById('projectsModal'))"><i class="fa-solid fa-xmark fa-2x"></i></a>
+                <div class="modal-content">
+
+                    <!--Slideshow-->
+                    <div class="slideshow mySlides projectsSlides">
+                        <img 
+                        src="images/illust/soupy time concept poster_v2.png"/>
+                    </div>
+                    <div class="slideshow mySlides projectsSlides">
+                        <img 
+                        src="images/concept/soupy_expressions.png"/>
+                    </div>
+                    <div class="slideshow mySlides projectsSlides">
+                        <img 
+                        src="images/concept/lineup-pilote.png" />
+
+                    </div>
+                    <div class="slideshow mySlides projectsSlides">
+                        <img 
+                        src="images/story/Scan2025-05-29_124309_000_1.png" />
+                    </div>
+                    <div class="slideshow mySlides projectsSlides">
+                        <img 
+                        src="images/story/Scan2025-05-29_124309_000_2.png" />
+                    </div>
+                    <div class="slideshow mySlides projectsSlides">
+                        <img 
+                        src="images/story/Scan2025-05-29_124309_003.png" />
+                    </div>                 
+                
+
+                </div>
+                <a class="prev" onclick="plusSlides('projectsSlides', -1)"><i class="fa-solid fa-angle-left fa-2x"></i></a>
+                <a class="next" onclick="plusSlides('projectsSlides', 1)"><i class="fa-solid fa-angle-right fa-2x"></i></a>
+            </div>
+</body>
